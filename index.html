@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СТРОЙГАРАНТ - Строительство домов</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo">СТРОЙГАРАНТ</div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="#home" class="nav__link">Главная</a></li>
+                        <li><a href="#about" class="nav__link">О нас</a></li>
+                        <li><a href="#projects" class="nav__link">Проекты</a></li>
+                        <li><a href="#contact" class="nav__link">Контакты</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-nav-toggle" aria-label="Меню">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Главный экран (Hero) -->
+        <section id="home" class="hero">
+            <div class="hero__background"></div>
+            <div class="container">
+                <div class="hero__content">
+                    <h1 class="hero__title fade-in">СТРОЙГАРАНТ</h1>
+                    <p class="hero__subtitle fade-in">Строим качественно и в срок</p>
+                    <button class="btn hero__btn fade-in" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Заказать звонок</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок "О нас" -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">О нас</h2>
+                <div class="about__content">
+                    <div class="about__text fade-in">
+                        <p>Компания СТРОЙГАРАНТ более 10 лет занимается строительством качественных и надежных домов. Мы используем современные технологии и лучшие материалы, чтобы ваш дом радовал вас долгие годы.</p>
+                        <p>Наша команда — это опытные специалисты, которые любят свое дело и отвечают за результат. Мы строим дома так, как строили бы для себя.</p>
+                    </div>
+                    <div class="about__stats">
+                        <div class="stat-item fade-in">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-text">лет на рынке</div>
+                        </div>
+                        <div class="stat-item fade-in">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-text">построенных домов</div>
+                        </div>
+                        <div class="stat-item fade-in">
+                            <div class="stat-number">30</div>
+                            <div class="stat-text">специалистов в команде</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок "Проекты" (Портфолио) -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Наши проекты</h2>
+                <div class="projects__grid">
+                    <div class="project-card fade-in">
+                        <div class="project-card__image">
+                            <img src="images/project-1.jpg" alt="Проект 1">
+                        </div>
+                        <h3 class="project-card__title">Современный коттедж</h3>
+                        <p class="project-card__desc">Площадь: 150 м² | Срок: 4 месяца</p>
+                    </div>
+                    <div class="project-card fade-in">
+                        <div class="project-card__image">
+                            <img src="images/project-2.jpg" alt="Проект 2">
+                        </div>
+                        <h3 class="project-card__title">Загородный дом</h3>
+                        <p class="project-card__desc">Площадь: 120 м² | Срок: 3.5 месяца</p>
+                    </div>
+                    <div class="project-card fade-in">
+                        <div class="project-card__image">
+                            <img src="images/project-3.jpg" alt="Проект 3">
+                        </div>
+                        <h3 class="project-card__title">Дачный домик</h3>
+                        <p class="project-card__desc">Площадь: 80 м² | Срок: 2.5 месяца</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок "Контакты" с формой -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Свяжитесь с нами</h2>
+                <div class="contact__wrapper">
+                    <div class="contact__info fade-in">
+                        <h3>Наши контакты</h3>
+                        <p>Телефон: +7 (999) 123-45-67</p>
+                        <p>Email: info@stroygarant.ru</p>
+                        <p>Адрес: г. Белгород, ул. Преображенская, д. 1</p>
+                    </div>
+                    <div class="contact__form fade-in">
+                        <!-- ФОРМА ДЛЯ GETFORM.IO -->
+                        <form id="feedback-form" action="https://getform.io/f/rp8ais96j6k" method="POST">
+                            <!-- Защита от ботов (honeypot) -->
+                            <input type="text" name="_gotcha" style="display:none">
+                            
+                            <!-- Скрытое поле для темы письма -->
+                            <input type="hidden" name="_subject" value="Новая заявка с сайта СТРОЙГАРАНТ">
+                            
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="phone" placeholder="Ваш телефон" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Ваш Email">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Ваше сообщение" rows="4"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn submit-btn">Отправить</button>
+                        </form>
+                        <div id="form-status" class="form-status"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 СТРОЙГАРАНТ. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Всплывающие уведомления -->
+    <div id="toast" class="toast">Сообщение отправлено!</div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
