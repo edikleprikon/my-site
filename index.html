@@ -104,30 +104,30 @@
                         <h3>Наши контакты</h3>
                         <p>Телефон: +7 (999) 123-45-67</p>
                         <p>Email: info@stroygarant.ru</p>
-                        <p>Адрес: г. Белгород, ул. Преображенская, д. 1</p>
+                        <p>Адрес: г. Белгород, ул. Преображенская, д. 3</p>
                     </div>
                     <div class="contact__form fade-in">
-                        <!-- ФОРМА ДЛЯ GETFORM.IO -->
-                        <form id="feedback-form" action="https://forminit.com/f/rp8ais96j6k" method="POST">
-                            <!-- Защита от ботов (honeypot) -->
-                            <input type="text" name="_gotcha" style="display:none">
-                            
-                            <!-- Скрытое поле для темы письма -->
-                            <input type="hidden" name="_subject" value="Новая заявка с сайта СТРОЙГАРАНТ">
-                            
+                        <!-- ФОРМА ДЛЯ FORMINIT.IO -->
+                        <form id="feedback-form">
+                            <!-- Поля отправителя (Sender Block) -->
                             <div class="form-group">
-                                <input type="text" name="name" placeholder="Ваше имя" required>
+                                <input type="text" name="fi-sender-firstName" placeholder="Ваше имя" required>
                             </div>
                             <div class="form-group">
-                                <input type="tel" name="phone" placeholder="Ваш телефон" required>
+                                <input type="text" name="fi-sender-lastName" placeholder="Ваша фамилия" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" name="email" placeholder="Ваш Email">
-                            </div>
-                            <div class="form-group">
-                                <textarea name="message" placeholder="Ваше сообщение" rows="4"></textarea>
+                                <input type="email" name="fi-sender-email" placeholder="Ваш Email" required>
                             </div>
                             
+                            <!-- Текстовое поле для сообщения (Field Block) -->
+                            <div class="form-group">
+                                <textarea name="fi-text-message" placeholder="Ваше сообщение" rows="4" required></textarea>
+                            </div>
+
+                            <!-- Honeypot поле для защиты от спама (как в документации) -->
+                            <input type="hidden" name="_gotcha" style="display:none !important" />
+
                             <button type="submit" class="btn submit-btn">Отправить</button>
                         </form>
                         <div id="form-status" class="form-status"></div>
@@ -144,9 +144,11 @@
         </div>
     </footer>
 
-    <!-- Всплывающие уведомления -->
+    <!-- Всплывающие уведомления (будет использовано в script.js) -->
     <div id="toast" class="toast">Сообщение отправлено!</div>
 
+    <!-- Подключение SDK Forminit и вашего скрипта -->
+    <script src="https://forminit.com/sdk/v1/forminit.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
